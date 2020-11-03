@@ -1,9 +1,23 @@
 //import express and store it in variable called app
 const express = require('express');
-const app = express();
+const mongoose = require('mongoose');
 require('dotenv').config();
 
-//handle the request from the homepage
+//app
+const app = express();
+
+//db
+mongoose.connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+    //useCreateIndex: true
+}).then(() => console.log("DB Connected"));
+
+mongoose.connection.on('error', err => {
+    console.log(`DB connection error: ${err.message}`)
+});
+
+//the routes to handle the request from the homepage
 app.get('/', (req, res) => {
     res.send("hello from node yay");
 });
