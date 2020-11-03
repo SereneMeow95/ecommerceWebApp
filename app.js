@@ -5,7 +5,7 @@ require('dotenv').config();
 
 //handle the request from the homepage
 app.get('/', (req, res) => {
-    res.send("hello from node ily");
+    res.send("hello from node yay");
 });
 
 //port that run the server
