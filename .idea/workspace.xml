@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15489d53-1e3e-4d91-b3e5-205e18f290ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
       <workItem from="1604306306973" duration="10000" />
       <workItem from="1604306432101" duration="595000" />
       <workItem from="1604472933154" duration="19510000" />
-      <workItem from="1604555980113" duration="3548000" />
+      <workItem from="1604555980113" duration="7179000" />
     </task>
     <servers />
   </component>
@@ -91,5 +91,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="477" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1604306143655" />
+    <state x="42" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1604563591883">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="42" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1604563591883" />
   </component>
 </project>
