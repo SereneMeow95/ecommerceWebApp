@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const Auth = require('../models/user');
 const jwt = require('jsonwebtoken'); //to generate signed token
 const expressJwt = require('express-jwt'); //for authorization check
 const {errorHandler} = require('../helpers/dbErrorHandler');
@@ -6,7 +6,7 @@ const {errorHandler} = require('../helpers/dbErrorHandler');
 //signup is a method that can be used in routes
 exports.signup = (req, res) => {
     //console.log('req.body', req.body);
-    const user = new User(req.body);
+    const user = new Auth(req.body);
     user.save((err, user) => {
         if(err){
             return res.status(400).json({
@@ -24,7 +24,7 @@ exports.signup = (req, res) => {
 exports.signin = (req, res) => {
     //find the user based on email
     const {email, password} = req.body;
-    User.findOne({email}, (err, user) => {
+    Auth.findOne({email}, (err, user) => {
         if (err || !user){
             return res.status(400).json({
                 error: "Account does not exist. Please signup."
@@ -59,5 +59,5 @@ exports.signout = (req, res) => {
 exports.requireSignin = expressJwt({
     secret: process.env.JWT_SECRET,
     algorithms: ["HS256"],
-    userProperty: "auth",
+    userProperty: "auth"
 });
