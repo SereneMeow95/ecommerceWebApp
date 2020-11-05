@@ -22,10 +22,6 @@
     <list default="true" id="15489d53-1e3e-4d91-b3e5-205e18f290ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,8 @@
       <workItem from="1604306004993" duration="288000" />
       <workItem from="1604306306973" duration="10000" />
       <workItem from="1604306432101" duration="595000" />
-      <workItem from="1604472933154" duration="18312000" />
+      <workItem from="1604472933154" duration="19510000" />
+      <workItem from="1604555980113" duration="390000" />
     </task>
     <servers />
   </component>
@@ -85,6 +82,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="477" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604306143655">
