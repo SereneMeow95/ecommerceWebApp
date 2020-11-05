@@ -61,3 +61,25 @@ exports.requireSignin = expressJwt({
     algorithms: ["HS256"],
     userProperty: "auth"
 });
+
+//make sure the login user can only view own info but cant view other user info
+exports.isAuth = (req, res, next) => {
+    let user = req.profile && req.auth && req.profile._id == req.auth._id;
+    if (!user){
+        return res.status (403).json({
+            error: "Access denied!"
+        });
+    }
+    next();
+};
+
+//make sure login user is an admin to view info
+exports.isAdmin = (req, res, next) => {
+    if (req.profile.role === 0){
+        return res.status(403).json({
+            error: "Admin resource! Access denied!"
+        });
+    }
+    next();
+}
+
