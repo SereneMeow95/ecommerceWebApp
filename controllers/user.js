@@ -1,5 +1,9 @@
 const User = require('../models/user');
 
+// exports.sayHi = (req, res) => {
+//     res.json({ message: "hello there"});
+// };
+
 exports.userById = (req, res, next, id) => {
     User.findById(id).exec((err, user) => {
         if(err || !user){

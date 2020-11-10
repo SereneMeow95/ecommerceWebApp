@@ -29,11 +29,11 @@ mongoose.connection.on('error', err => {
 });
 
 //middlewares
+app.use(cors());
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(expressValidator());
-app.use(cors());
 
 //the routes middleware
 app.use("/api", authRoutes);

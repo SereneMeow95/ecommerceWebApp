@@ -21,7 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="15489d53-1e3e-4d91-b3e5-205e18f290ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/category.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +49,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/ecommerce" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,7 +73,15 @@
       <workItem from="1604472933154" duration="19510000" />
       <workItem from="1604555980113" duration="9245000" />
       <workItem from="1604579606950" duration="15095000" />
-      <workItem from="1604645024583" duration="6777000" />
+      <workItem from="1604645024583" duration="9475000" />
+      <workItem from="1604682721778" duration="617000" />
+      <workItem from="1604924007353" duration="56000" />
+      <workItem from="1604924425070" duration="3000" />
+      <workItem from="1604926772466" duration="7021000" />
+      <workItem from="1604946880988" duration="572000" />
+      <workItem from="1604949417995" duration="333000" />
+      <workItem from="1604978297700" duration="12293000" />
+      <workItem from="1605011571668" duration="2611000" />
     </task>
     <servers />
   </component>
@@ -92,6 +105,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="477" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1604306143655" />
+    <state x="122" y="187" key="FileChooserDialogImpl" timestamp="1604984257215">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="122" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604984257215" />
     <state x="42" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1604586599787">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
