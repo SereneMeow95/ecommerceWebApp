@@ -7,8 +7,8 @@ const {
     create,
     listOrders,
     getStatusValues,
-    // orderById,
-    // updateOrderStatus
+    orderById,
+    updateOrderStatus
 } = require("../controllers/order");
 const { decreaseQuantity } = require("../controllers/product");
 
@@ -29,15 +29,15 @@ router.get(
     isAdmin,
     getStatusValues
 );
-// router.put(
-//     "/order/:orderId/status/:userId",
-//     requireSignin,
-//     isAuth,
-//     isAdmin,
-//     updateOrderStatus
-// );
+router.put(
+    "/order/:orderId/status/:userId",
+    requireSignin,
+    isAuth,
+    isAdmin,
+    updateOrderStatus
+);
 
 router.param("userId", userById);
-//router.param("orderId", orderById);
+router.param("orderId", orderById);
 
 module.exports = router;
