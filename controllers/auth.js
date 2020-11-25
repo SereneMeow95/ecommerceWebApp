@@ -4,21 +4,16 @@ const expressJwt = require('express-jwt'); //for authorization check
 const {errorHandler} = require('../helpers/dbErrorHandler');
 
 //signup is a method that can be used in routes
-exports.signup = (req, res) => {
-    //console.log('req.body', req.body);
-    const user = new Auth(req.body);
-    user.save((err, user) => {
-        if(err){
-            return res.status(400).json({
-                err: 'Email is taken'
-            });
-        }
-        user.salt = undefined;
-        user.hashed_password = undefined;
-        res.json({
-            user
+exports.signup = async (req, res) => {
+    console.log('req.body', req.body);
+    const userExists = await Auth.findOne({email:req.body.email});
+    if (userExists)
+        return res.status(403).json({
+            error: 'Email is taken!'
         });
-    });
+    const user = await new Auth(req.body);
+    await user.save();
+    res.status(200).json({message: "Signup successfully."});
 };
 
 exports.signin = (req, res) => {
