@@ -2,10 +2,6 @@ const User = require('../models/user');
 const { Order } = require('../models/order');
 const { errorHandler } = require('../helpers/dbErrorHandler');
 
-// exports.sayHi = (req, res) => {
-//     res.json({ message: "hello there"});
-// };
-
 exports.userById = (req, res, next, id) => {
     User.findById(id).exec((err, user) => {
         if(err || !user){
@@ -25,16 +21,59 @@ exports.read = (req, res) => {
     return res.json(req.profile);
 }
 
+//update user/admin profile
 exports.update = (req, res) => {
-    User.findOneAndUpdate({_id: req.profile._id}, {$set: req.body}, {new: true}, (err, user) => {
-        if (err) {
+    const { name, email, password } = req.body;
+
+    User.findOne({ _id: req.profile._id }, (err, user) => {
+        if (err || !user) {
             return res.status(400).json({
-                error: 'You are not authorized to perform this action!'
+                error: 'User not found.'
             });
         }
-        user.hashed_password = undefined;
-        user.salt = undefined;
-        res.json(user);
+        if (!name) {
+            return res.status(400).json({
+                error: 'Name is required!'
+            });
+        } else {
+            user.name = name;
+        }
+
+        if (!email) {
+            return res.status(400).json({
+                error: 'Email is required!'
+            });
+        } else {
+            user.email = email;
+        }
+
+        if (password) {
+            if (password.length < 6) {
+                return res.status(400).json({
+                    error: 'Password should be min 6 characters long.'
+                });
+            } else {
+                user.password = password;
+            }
+        }
+
+        if (!password) {
+            return res.status(400).json({
+                error: 'Password is required!'
+            });
+        }
+
+        user.save((err, updatedUser) => {
+            if (err) {
+                console.log('USER UPDATE ERROR', err);
+                return res.status(400).json({
+                    error: 'User update failed'
+                });
+            }
+            updatedUser.hashed_password = undefined;
+            updatedUser.salt = undefined;
+            res.json(updatedUser);
+        });
     });
 };
 
